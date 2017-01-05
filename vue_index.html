@@ -12,13 +12,13 @@
     </div>
     -->
 
-    <div id="the-list2">
-        <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
-    </div>
-
-    <div id="add-task" style="margin-top: 2em;">
+    <div id="add-task" style="margin-bottom: 2em; margin-top: 1em;">
         <input id="input-add-task" value="" placeholder="Add New Task" />
         <button id="btn-add-task" onclick="addTask();">Add</button>
+    </div>
+
+    <div id="the-list2">
+        <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
     </div>
 
     <script src="./vue_code.js"></script>
