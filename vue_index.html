@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Vue Stuff To Do!</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <h2>Vue To Do</h2>
+
+    <!--
+    <div id="the-list">
+        <label v-for="task in taskList" style="display:block">{{ task }}</label>
+    </div>
+    -->
+
+    <div id="the-list2">
+        <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
+    </div>
+
+    <div id="add-task" style="margin-top: 2em;">
+        <input id="input-add-task" value="" placeholder="Add New Task" />
+        <button id="btn-add-task" onclick="addTask();">Add</button>
+    </div>
+
+    <script src="./vue_code.js"></script>
+  </body>
+</html>
+
