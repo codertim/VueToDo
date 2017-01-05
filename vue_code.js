@@ -20,7 +20,7 @@ var appList = new Vue({
 Vue.component('single-task', {
     props: ['mytask'],
     // data: function () { //     return { propMytask: this.mytask }; // },
-    template: '<div style="margin-bottom: 1.1em;"><label style="background-color: indianred; display:inline; margin-bottom: 0.1em; padding: 0.2em 3em;">Task: {{ mytask }}<span style="padding-left: 2em; padding-right: 0.3em;" v-on:click="handleClose()">&times;</span></label></div>',
+    template: '<div style="margin-bottom: 1.1em;"><label style="background-color: indianred; border-left: 3px solid #0000ff; display:inline; margin-bottom: 0.1em; padding: 0.2em 3em;">Task: {{ mytask }}<span style="padding-left: 2em; padding-right: 0.3em;" v-on:click="handleClose()">&times;</span></label></div>',
     methods: {
         handleClose: function() {
             console.log("appList.handleclose");
