@@ -34,7 +34,8 @@ Vue.component('single-task', {
 var myAppList = new Vue({
     el: "#the-list2",
     data: {
-        allTasks: taskData
+        allTasks: taskData,
+        msg: "Tasks To do:"
     }
 });
 
