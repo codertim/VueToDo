@@ -17,7 +17,7 @@
     -->
 
     <div id="add-task" style="margin-bottom: 2em; margin-top: 1em;">
-        <input id="input-add-task" v-model.trim="model1" placeholder="Add New Task" />
+        <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" />
         <button id="btn-add-task" onclick="addTask();">Add</button>
         <label>{{ model1 }}</label>
     </div>
