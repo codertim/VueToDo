@@ -34,7 +34,11 @@ Vue.component('single-task', {
 var myAppList = new Vue({
     el: "#the-list2",
     data: {
+        myLink: "<a href='http://www.google.com'>Google</a>",
+        instructions: "Enter task ...",
         allTasks: taskData,
+        styleTest1: 'test1',
+        styleTest2: 'test2',
         msg: "Tasks To do:"
     }
 });

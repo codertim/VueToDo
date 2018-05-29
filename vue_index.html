@@ -2,6 +2,10 @@
   <head>
     <title>Vue Stuff To Do!</title>
     <!-- reference link: redirects to latest version of vue: https://unpkg.com/vue -->
+    <style>
+      .test1 { background-color: green; color: orange; }
+      .test2 { background-color: blue; color: yellow; }
+    </style>
   </head>
   <body>
     <h2>Vue To Do</h2>
@@ -18,7 +22,11 @@
     </div>
 
     <div id="the-list2">
-        <h5 v-text="msg"></h5>
+        <h6>Search google: <span v-html="myLink"></span></h6>
+        <h5 v-bind:class="[styleTest1, styleTest2]">{{ instructions }}</h5>
+        <!-- <h5 v-text="msg"></h5> -->
+        <h5 v-once="msg"></h5>
+        <!-- <h5 v-html="msg"></h5> -->
         <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
     </div>
 
