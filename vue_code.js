@@ -30,12 +30,19 @@ Vue.component('single-task', {
     }
 });
 
+var myAddTask = new Vue({
+    el: "#add-task",
+    data: {
+        model1: 'Test Model 1'
+    }
+});
 
 var myAppList = new Vue({
     el: "#the-list2",
     data: {
         myLink: "<a href='http://www.google.com'>Google</a>",
         instructions: "Enter task ...",
+        isStyleOverride: true,
         allTasks: taskData,
         styleTest1: 'test1',
         styleTest2: 'test2',
@@ -51,4 +58,5 @@ function addTask() {
     console.log("New Task = " + newTask);
     appList.addNewTaskToList(newTask);
 }
+
 
