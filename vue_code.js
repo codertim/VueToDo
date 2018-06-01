@@ -36,7 +36,8 @@ var myAddTask = new Vue({
         model1: 'Test Model 1'
     },
     methods: {
-        handleEnter: function() { console.log("Handling Enter - To Be Implemented"); }
+        handleEnter: function() { console.log("Handling Enter - To Be Implemented"); },
+        handleControlAndEnter: function() { console.log("Handle Control and Enter"); }
     }
 });
 

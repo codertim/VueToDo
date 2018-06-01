@@ -17,7 +17,7 @@
     -->
 
     <div id="add-task" style="margin-bottom: 2em; margin-top: 1em;">
-        <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" v-on:keyup.enter="handleEnter" />
+        <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" v-on:keyup.enter="handleEnter" v-on:keyup.ctrl.enter="handleControlAndEnter" />
         <button id="btn-add-task" onclick="addTask();">Add</button>
         <label>{{ model1 }}</label>
     </div>
