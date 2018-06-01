@@ -34,6 +34,9 @@ var myAddTask = new Vue({
     el: "#add-task",
     data: {
         model1: 'Test Model 1'
+    },
+    methods: {
+        handleEnter: function() { console.log("Handling Enter - To Be Implemented"); }
     }
 });
 
@@ -47,6 +50,11 @@ var myAppList = new Vue({
         styleTest1: 'test1',
         styleTest2: 'test2',
         msg: "Tasks To do:"
+    },
+    methods: {
+        testClickEvent: function() {
+            alert("testClickEvent - starting");
+        }
     }
 });
 

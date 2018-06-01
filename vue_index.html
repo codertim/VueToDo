@@ -17,7 +17,7 @@
     -->
 
     <div id="add-task" style="margin-bottom: 2em; margin-top: 1em;">
-        <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" />
+        <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" v-on:keyup.enter="handleEnter" />
         <button id="btn-add-task" onclick="addTask();">Add</button>
         <label>{{ model1 }}</label>
     </div>
@@ -30,6 +30,10 @@
         <!-- <h5 v-html="msg"></h5> -->
         <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
     </div>
+
+    <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
+
+    <a v-on:click.prevent.stop="testClickEvent" href="#">Test for Prevent</a>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="./vue_code.js"></script>
