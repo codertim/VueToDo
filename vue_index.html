@@ -12,12 +12,11 @@
     <h2>Vue To Do</h2>
 
     <!--
-    <div id="the-list">
-        <label v-for="task in taskList" style="display:block">{{ task }}</label>
-    </div>
+        <div id="the-list"> <label v-for="task in taskList" style="display:block">{{ task }}</label> </div>
     -->
 
     <div id="add-task" style="margin-bottom: 2em; margin-top: 1em;">
+        <div v-if="Math.random() < 0.5">Hello there</div>
         <input id="input-add-task" v-model.lazy.trim="model1" placeholder="Add New Task" v-on:keyup.enter="handleEnter" v-on:keyup.ctrl.enter="handleControlAndEnter" />
         <button id="btn-add-task" onclick="addTask();">Add</button>
         <label>{{ model1 }}</label>
@@ -40,4 +39,5 @@
     <script src="./vue_code.js"></script>
   </body>
 </html>
+
 
