@@ -5,6 +5,7 @@
     <style>
       .test1 { background-color: green; color: orange; }
       .test2 { background-color: blue; color: yellow; }
+      [v-cloak] { display: none; }
     </style>
   </head>
   <body>
@@ -24,7 +25,7 @@
 
     <div id="the-list2">
         <h6>Search google: <span v-html="myLink"></span></h6>
-        <h5 v-bind:class="[styleTest1, styleTest2]" v-bind:style="{ color:isStyleOverride ? 'magenta' : '#777'}">{{ instructions }}</h5>
+        <h5 v-cloak v-bind:class="[styleTest1, styleTest2]" v-bind:style="{ color:isStyleOverride ? 'magenta' : '#777'}">{{ instructions }}</h5>
         <!-- <h5 v-text="msg"></h5> -->
         <h5 v-once="msg"></h5>
         <!-- <h5 v-html="msg"></h5> -->
