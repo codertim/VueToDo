@@ -1,6 +1,5 @@
 
 
-
 var taskData = ["Testing"];
 
 var appList = new Vue({
@@ -38,6 +37,11 @@ var myAddTask = new Vue({
     methods: {
         handleEnter: function() { console.log("Handling Enter - To Be Implemented"); },
         handleControlAndEnter: function() { console.log("Handle Control and Enter"); }
+    },
+    watch: {
+        model1: function(latest, orig) { 
+            console.log("watch - model1 - latest:", latest, " - orig:", orig);
+        }
     }
 });
 
@@ -50,7 +54,7 @@ var myAppList = new Vue({
         allTasks: taskData,
         styleTest1: 'test1',
         styleTest2: 'test2',
-        msg: "Tasks To do:"
+        msg: "Tasks To do:",
     },
     methods: {
         testClickEvent: function() {
