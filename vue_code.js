@@ -39,8 +39,11 @@ var myAddTask = new Vue({
         handleControlAndEnter: function() { console.log("Handle Control and Enter"); }
     },
     watch: {
-        model1: function(latest, orig) { 
-            console.log("watch - model1 - latest:", latest, " - orig:", orig);
+        model1: {
+            handler: function(latest, orig) { 
+                console.log("watch - model1 - latest:", latest, " - orig:", orig);
+            },
+            deep: false
         }
     }
 });
