@@ -16,6 +16,16 @@ var appList = new Vue({
     }
 });
 
+Vue.component('test-vue-component', {
+    props: ['prop1'],
+    template: '<div style="background-color: orange;"> Message for you: {{ prop1 }}</div>',
+    methods: {
+	method1: function() {
+		alert("method1");
+        }
+    }
+});
+
 Vue.component('single-task', {
     props: ['mytask'],
     // data: function () { //     return { propMytask: this.mytask }; // },
@@ -61,7 +71,7 @@ var myAppList = new Vue({
     },
     methods: {
         testClickEvent: function() {
-            alert("testClickEvent - starting");
+            console.log("testClickEvent - starting");
         }
     }
 });

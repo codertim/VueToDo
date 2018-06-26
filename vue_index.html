@@ -28,12 +28,13 @@
         <!-- <h5 v-text="msg"></h5> -->
         <h5 v-once="msg"></h5>
         <!-- <h5 v-html="msg"></h5> -->
+	<test-vue-component v-bind:prop1="'HelloThere'"></test-vue-component>
         <single-task v-for="currentTask in allTasks" v-bind:mytask="currentTask"></single-task>
+        <a v-on:click.prevent.stop="testClickEvent()" href="#">Test for Prevent</a>
     </div>
 
     <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
 
-    <a v-on:click.prevent.stop="testClickEvent" href="#">Test for Prevent</a>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="./vue_code.js"></script>
